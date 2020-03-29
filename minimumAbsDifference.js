@@ -23,8 +23,12 @@ var minimumAbsDifference = function(arr) {
     return arReturn
 };
 
-let arr = [4,2,1,3]
-console.log(minimumAbsDifference(arr), [[1,2],[2,3],[3,4]])
+let arr1 = [4,2,1,3]
+console.log(minimumAbsDifference(arr1), ":",[[1,2],[2,3],[3,4]])
 
-arr = [1,3,6,10,15]
-console.log(minimumAbsDifference(arr), [[1,3]])
+let arr2 = [1,3,6,10,15]
+console.log(minimumAbsDifference(arr2), ":",[[1,3]])
+
+
+let arr3 = [3,8,-10,23,19,-4,-14,27]
+console.log(minimumAbsDifference(arr3), ":",[[-14,-10],[19,23],[23,27]])

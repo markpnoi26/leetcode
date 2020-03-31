@@ -1,7 +1,7 @@
 var moveZeroes = function(nums) {
     numsLoop: for (let i=0; i<nums.length; i++) {
         pointer = i
-        while (nums[pointer] === 0) {
+        while (nums[pointer] === 0 && nums[pointer+1] !== undefined) {
             pointer++
         }
         let temp = nums[pointer]

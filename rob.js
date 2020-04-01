@@ -7,11 +7,9 @@ const rob = (nums) => {
 
     if (nums.length === 2) {
         return Math.max(...nums)
-    }
-    if (nums.length === 1) {
+    } else if (nums.length === 1) {
         return nums[0]
-    }
-    if (nums.length === 0) {
+    } else if (nums.length === 0) {
         return 0
     }
 
@@ -38,7 +36,7 @@ console.log(rob(house), 4)
 house = [2,7, 9, 3,1]
 console.log(rob(house), 12)
 
-//       4  7 12 10 
+//       4  7 12 10  21 22
 house = [4, 7, 8, 3, 9, 10]
 //                   i
 // prev = 10

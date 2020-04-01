@@ -18,7 +18,7 @@ const rob = (nums) => {
     let prev = nums[1]
 
     for (let i=2; i<nums.length; i++) {
-        let curr = max + nums[i]
+        const curr = max + nums[i]
         max = Math.max(max, prev)
         globalMax = Math.max(max, curr)
         prev = curr
@@ -36,9 +36,9 @@ console.log(rob(house), 4)
 house = [2,7, 9, 3,1]
 console.log(rob(house), 12)
 
-//       4  7 12 10  21 22
+//                  21  22
 house = [4, 7, 8, 3, 9, 10]
-//                   i
+//                      i
 // prev = 10
 // max = 12
 // curr = 21

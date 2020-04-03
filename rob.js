@@ -36,7 +36,7 @@ console.log(rob(house), 4)
 house = [2,7, 9, 3,1]
 console.log(rob(house), 12)
 
-//                  21  22
+//       4  7 12 10 21  22
 house = [4, 7, 8, 3, 9, 10]
 //                      i
 // prev = 10

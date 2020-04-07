@@ -10,18 +10,12 @@ const combinationSum = (candidates, target) => {
 };
 
 const permuteCombos = (candidates, currNum, currArr = [], target, coll =[]) => {
-    // slow because we have to keep a set
-    // we need to make it faster by breaking the loop once first index is found.
     if (currNum > target) {
         return
     }
     
     if (currNum === target) {
-        // let string = currArr.sort().toString()
-        // if (!set.has(string)) {
-        //     set.add(string)
         coll.push(currArr)
-        // }
         return
     }
 

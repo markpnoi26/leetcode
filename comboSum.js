@@ -4,7 +4,9 @@
  * @return {number[][]}
  */
 const combinationSum = (candidates, target) => {
-    candidates.sort((a,b) => a-b)
+    candidates.sort(
+        (a,b) => a-b
+    )
     return permuteCombos(candidates, 0, [], target)
     
 };

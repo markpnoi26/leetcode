@@ -44,6 +44,7 @@ const coinChangeDP = (coins, amount) => {
     for  (let i=1; i<=amount; i++) {
         for (let coin of coins) {
             if (i >= coin) {
+                // find the minimum based from dp[i - coins before] and add 1 to it.
                 dp[i] = Math.min(dp[i], dp[i-coin]+1)
             }
         }

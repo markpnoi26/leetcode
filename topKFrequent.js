@@ -4,6 +4,7 @@
  * @return {number[]}
  */
 const topKFrequent = (nums, k) => {
+    // O(n) solution without using any sorting algorithm
     
     const priorityHeap = new PriorityQueue()
     const response = []

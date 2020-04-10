@@ -19,8 +19,7 @@ const findKthLargest = (nums, k) => {
 };
 
 // * this is not the most optimized version of this code.
-// This can be improved upon by doing heap sort, which is log(n)
-// at the cost of extra space, O(nlogn) becomes O(n) instead.
+// This can be improved upon by doing heap sort (I think?).
 
 
 let input = [3,2,1,5,6,4], k = 2

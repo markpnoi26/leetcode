@@ -31,6 +31,8 @@ const leastInterval = (tasks, n) => {
     delete newStore[Object.keys(newStore)[0]]
 
     for (let task in newStore) {
+        // idleSlots can not be less than maxVal, otherwise if newStore[task] is lower
+        // we subtract that to the idleSlots
         idleSlots -= Math.min(newStore[task], maxVal)
     }
 

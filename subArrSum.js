@@ -18,6 +18,21 @@ const subarraySum = (nums, k) => {
     return currCount
 };
 
+const subarraySumHash = (nums, k) => {
+    // need to anylyze this approach.
+    const map = new Map([[0, 1]]);
+    let sum = 0;
+    let total = 0;
+    for (let num of nums) {
+        sum = sum + num;
+        total += (map.get(sum - k) || 0);
+        map.set(sum, (map.get(sum) || 0) + 1);
+    }
+    
+    return total;
+
+};
+
 
 let nums = [1,1,1]
 console.log(subarraySum(nums, 2), 2)

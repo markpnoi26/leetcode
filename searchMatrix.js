@@ -9,39 +9,19 @@ const searchMatrix = (matrix, target) => {
     if (matrix.length === 0 || matrix[0].length === 0) return false
 
     let i = 0
-    let j = 0
+    let j = matrix[0].length-1
 
-    while (matrix[i][j] !== target) {
-        // move right or down
-        let down, right;
-        if (i < matrix.length -1) {
-            down = matrix[i+1][j]
-        } 
+    while (i <= matrix.length-1 && j >= 0) {
+        if (matrix[i][j] === target) return true
 
-        if (j < matrix.length -1 ) {
-            right = matrix[i][j+1]
-        } 
-
-        console.log(i, j)
-        
-        if (down === target || right === target) {
-            return true
-        } else if (down === undefined && right) {
-            j++
-        } else if (right === undefined && down) {
+        if (matrix[i][j] < target) {
             i++
-        } else if (right === undefined && down === undefined) {
-            return false
-        } else if (right >= down && right <= target) {
-            j++
-        } else if (down >= right && down <= target) {
-            i++
-        } 
+        } else {
+            j--
+        }
 
-        if (i === matrix.length-1 && j === matrix[0].length-1) return false
-        if (matrix[i][j] > target) return false
     }
-
+    
     return false
 }
 

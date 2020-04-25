@@ -38,6 +38,30 @@ const merge = (intervals) => {
     return ans
 };
 
+const mergeNlogN = intervals => {
+    if (intervals.length === 0) return []
+
+    intervals.sort((a,b) => a[0]-b[0])
+    const answer = []
+    let currInterval = intervals[0][0]
+    let currMaxInterval = intervals[0][1]
+
+    for (let i=1;i<intervals.length; i++) {
+        if (intervals[i][0] <= currMaxInterval || intervals[i][1] <= currMaxInterval) {
+            currMaxInterval = Math.max(currMaxInterval, intervals[i][1])
+        } 
+        if (intervals[i][0] > currMaxInterval) {
+            answer.push([currInterval, currMaxInterval])
+            currInterval = intervals[i][0]
+            currMaxInterval = intervals[i][1]
+        }
+    }
+    answer.push([currInterval, currMaxInterval])
+
+    return answer
+};
+
+
 let input = [
     [1, 3],
     [2, 6],

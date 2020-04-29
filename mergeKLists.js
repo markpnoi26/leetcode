@@ -10,6 +10,7 @@
  * @return {ListNode}
  */
 const mergeKLists = lists => {
+    if (!lists.length) return lists
 
     let nodeList = []
 
